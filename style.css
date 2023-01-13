@@ -1,6 +1,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background: #f3f1ff;
+  box-sizing: border-box;
 }
 main {
   display: flex;
@@ -10,7 +11,8 @@ main {
 }
 .container {
   background: #ffffff;
-
+  justify-content: center;
+  align-items: center;
   width: 870px;
   padding: 30px;
   border-radius: 10px;
@@ -109,9 +111,9 @@ hr {
 
 /* mobile Device */
 
-@media only screen and (max-width: 688px) {
+@media only screen and (max-width: 576px) {
   .container {
-    width: 95%;
+    width: 100%;
   }
   .players,
   .blogs,
@@ -138,5 +140,37 @@ hr {
   .course_duration {
     padding-right: 5px;
     margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section_title {
+    padding-left: 30px;
+  }
+  .player {
+    flex-direction: column;
+  }
+  .top {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .blogs {
+    padding: 25px;
+  }
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px;
+    gap: 30px;
   }
 }
